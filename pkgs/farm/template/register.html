@@ -1,0 +1,18 @@
+{{define "body"}}
+<div class="ui-content-width">
+    <h1>Register Permaculture Farm</h1>
+    <form class="ui-form" method="post">
+        <label for="">Farm handle</label>
+        <input name="handle" type="text" {{with .Handle}}value="{{.}}"{{end}}>
+        {{with .HandleError}}<div>{{.}}</div>{{end}}
+
+        <label for="">Location</label>
+        <input name="location" type="text" {{with .Location}}value="{{.}}"{{end}}>
+        {{with .LocationError}}<div>{{.}}</div>{{end}}
+
+        <div>
+            <button>Submit</button>
+        </div>
+    </form>
+</div>
+{{end}}

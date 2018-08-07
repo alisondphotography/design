@@ -1,0 +1,18 @@
+{{define "body"}}
+<div class="ui-content-width">
+    <h1>Register Account</h1>
+    <form class="ui-form" method="post">
+        <label for="">Username</label>
+        <input name="username" type="text" {{with .Username}}value="{{.}}"{{end}}>
+        {{with .UsernameError}}<div>{{.}}</div>{{end}}
+
+        <label for="">Password</label>
+        <input name="password" type="text" {{with .Password}}value="{{.}}"{{end}}>
+        {{with .PasswordError}}<div>{{.}}</div>{{end}}
+
+        <div>
+            <button>Submit</button>
+        </div>
+    </form>
+</div>
+{{end}}
